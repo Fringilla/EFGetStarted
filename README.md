@@ -63,7 +63,7 @@ public class BloggingContext : DbContext
 public class Blog
 {
     public int BlogId { get; set; }
-    public string Url { get; set; } = null;
+    public string Url { get; set; } = null!;
 
     public List<Post> Posts { get; } = new();
 }
@@ -71,8 +71,8 @@ public class Blog
 public class Post
 {
     public int PostId { get; set; }
-    public string Title { get; set; } = null;
-    public string Content { get; set; } = null;
+    public string Title { get; set; } = null!;
+    public string Content { get; set; } = null!;
 
     public int BlogId { get; set; }
     public Blog? Blog { get; set; }
